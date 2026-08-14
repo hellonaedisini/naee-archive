@@ -23,16 +23,12 @@
       color: #355070;
     }
 
-
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       text-align: center;
       padding: 70px 20px 55px;
       background: #dceeff;
-
       border-bottom-left-radius: 40px;
       border-bottom-right-radius: 40px;
     }
@@ -59,10 +55,7 @@
       margin: 0 5px;
     }
 
-
-    /* =========================
-       SECTION
-    ========================= */
+    /* SECTION */
 
     section {
       max-width: 1000px;
@@ -85,10 +78,7 @@
       color: #7899b8;
     }
 
-
-    /* =========================
-       GALLERY
-    ========================= */
+    /* GALLERY */
 
     .gallery {
       display: grid;
@@ -96,7 +86,6 @@
         auto-fit,
         minmax(220px, 1fr)
       );
-
       gap: 22px;
     }
 
@@ -104,10 +93,7 @@
       background: white;
       padding: 15px;
       border-radius: 22px;
-
-      box-shadow:
-        0 8px 25px rgba(100, 150, 200, 0.15);
-
+      box-shadow: 0 8px 25px rgba(100, 150, 200, 0.15);
       transition: 0.3s;
     }
 
@@ -118,28 +104,20 @@
     .card img {
       width: 80%;
       max-height: 300px;
-
       object-fit: contain;
-
       display: block;
       margin: 0 auto;
-
       border-radius: 16px;
     }
 
     .poster-placeholder {
       height: 280px;
-
       border-radius: 16px;
-
       background: #e8f3ff;
-
       display: flex;
       justify-content: center;
       align-items: center;
-
       color: #7aa3c7;
-
       text-align: center;
       padding: 20px;
     }
@@ -151,66 +129,43 @@
 
     .card p {
       margin: 0 5px 8px;
-
       font-size: 13px;
-
       color: #8aa5be;
-
       line-height: 1.5;
     }
 
-
-    /* =========================
-       SUPPORT SECTION
-    ========================= */
+    /* SUPPORT */
 
     .support-section {
-      text-align: center;
-
-      background: #eaf5ff;
-
-      max-width: 1000px;
-
-      margin: 20px auto 0;
-
+      max-width: 900px;
+      margin: 10px auto 40px;
       padding: 45px 20px;
-
+      background: #eaf5ff;
       border-radius: 35px;
+      text-align: center;
     }
 
     .support-section h2 {
       color: #4b86b4;
-
       font-size: 27px;
-
       margin-bottom: 10px;
     }
 
     .support-section p {
       color: #7899b8;
-
       font-size: 14px;
-
       line-height: 1.6;
-
       margin-bottom: 22px;
     }
 
     .support-btn {
       border: 1px solid #4b86b4;
-
       background: white;
-
       color: #4b86b4;
-
       padding: 13px 28px;
-
       border-radius: 30px;
-
       font-size: 14px;
-
       cursor: pointer;
-
       transition: 0.25s;
     }
 
@@ -219,27 +174,17 @@
       color: white;
     }
 
-
-    /* =========================
-       POPUP BACKGROUND
-    ========================= */
+    /* POPUP */
 
     .overlay {
       position: fixed;
-
       inset: 0;
-
       background: rgba(40, 70, 95, 0.45);
-
       display: none;
-
       justify-content: center;
       align-items: center;
-
       padding: 18px;
-
       overflow-y: auto;
-
       z-index: 9999;
     }
 
@@ -247,38 +192,21 @@
       display: flex;
     }
 
-
-    /* =========================
-       POPUP
-    ========================= */
-
     .popup {
       position: relative;
-
       width: 100%;
-
       max-width: 360px;
-
       max-height: 92vh;
-
       overflow-y: auto;
-
       background: white;
-
       border-radius: 25px;
-
       padding: 30px 20px 25px;
-
       text-align: center;
-
-      box-shadow:
-        0 15px 50px rgba(40, 80, 110, 0.25);
-
+      box-shadow: 0 15px 50px rgba(40, 80, 110, 0.25);
       animation: muncul 0.25s ease;
     }
 
     @keyframes muncul {
-
       from {
         transform: scale(0.9);
         opacity: 0;
@@ -288,109 +216,68 @@
         transform: scale(1);
         opacity: 1;
       }
-
     }
 
-
-    /* =========================
-       CLOSE BUTTON
-    ========================= */
+    /* CLOSE */
 
     .close {
       position: absolute;
-
       top: 10px;
       right: 15px;
-
       border: none;
-
       background: none;
-
       color: #7899b8;
-
       font-size: 25px;
-
       cursor: pointer;
     }
 
-
-    /* =========================
-       POPUP TEXT
-    ========================= */
+    /* POPUP TEXT */
 
     .popup h2 {
       color: #4b86b4;
-
       font-size: 23px;
-
       margin-bottom: 8px;
     }
 
     .popup p {
       color: #7899b8;
-
       font-size: 13px;
-
       line-height: 1.6;
-
       margin: 0 auto 20px;
-
       max-width: 290px;
     }
 
-
-    /* =========================
-       QRIS
-    ========================= */
+    /* QRIS */
 
     .qris-container {
       width: 100%;
-
       display: flex;
-
       justify-content: center;
-
       align-items: center;
-
       margin-bottom: 15px;
     }
 
     .qris {
       display: block;
-
-      width: auto;
-
+      width: 100%;
+      max-width: 300px;
       height: auto;
-
-      max-width: 100%;
-
-      max-height: 55vh;
-
       object-fit: contain;
-
       border-radius: 12px;
     }
 
     .scan {
       font-size: 12px;
-
       color: #8aa5be;
-
       line-height: 1.5;
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
       text-align: center;
-
       padding: 40px 20px;
-
       color: #7c9bb8;
-
       font-size: 13px;
     }
 
@@ -398,10 +285,7 @@
       color: #8eb8df;
     }
 
-
-    /* =========================
-       MOBILE
-    ========================= */
+    /* HP */
 
     @media (max-width: 600px) {
 
@@ -440,37 +324,27 @@
       }
 
       .support-section {
-        margin: 10px 15px 0;
-
+        margin: 10px 15px 30px;
         border-radius: 28px;
-
         padding: 38px 18px;
       }
 
       .popup {
         max-height: 90vh;
-
         padding: 30px 17px 23px;
       }
 
       .qris {
         max-width: 100%;
-
-        max-height: 50vh;
       }
-
     }
 
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- =========================
-       HEADER
-  ========================= -->
+  <!-- HEADER -->
 
   <header>
 
@@ -480,15 +354,11 @@
 
     <h1>
 
-      <span class="sparkle">
-        🫧
-      </span>
+      <span class="sparkle">🫧</span>
 
       naee—archive
 
-      <span class="sparkle">
-        🎀
-      </span>
+      <span class="sparkle">🎀</span>
 
     </h1>
 
@@ -499,10 +369,7 @@
   </header>
 
 
-
-  <!-- =========================
-       CREATIONS
-  ========================= -->
+  <!-- CREATIONS -->
 
   <section>
 
@@ -521,8 +388,7 @@
 
     <div class="gallery">
 
-
-      <!-- POSTER 01 -->
+      <!-- POSTER 1 -->
 
       <div class="card">
 
@@ -544,8 +410,7 @@
       </div>
 
 
-
-      <!-- POSTER 02 -->
+      <!-- POSTER 2 -->
 
       <div class="card">
 
@@ -568,8 +433,7 @@
       </div>
 
 
-
-      <!-- POSTER 03 -->
+      <!-- POSTER 3 -->
 
       <div class="card">
 
@@ -592,15 +456,34 @@
       </div>
 
 
+      <!-- RISOL POSTER -->
+
+      <div class="card">
+
+        <div class="poster-placeholder">
+
+          buat beli risol coklat ♡
+          <br>
+          ✦ support naee ✦
+
+        </div>
+
+        <h3>
+          Risol Coklat
+        </h3>
+
+        <p>
+          sedikit support buat beli risol coklat 🩵
+        </p>
+
+      </div>
+
     </div>
 
   </section>
 
 
-
-  <!-- =========================
-       SUPPORT
-  ========================= -->
+  <!-- SUPPORT -->
 
   <section class="support-section">
 
@@ -624,10 +507,7 @@
   </section>
 
 
-
-  <!-- =========================
-       QRIS POPUP
-  ========================= -->
+  <!-- QRIS POPUP -->
 
   <div
     class="overlay"
@@ -637,9 +517,6 @@
 
     <div class="popup">
 
-
-      <!-- CLOSE -->
-
       <button
         class="close"
         onclick="closeSupport()"
@@ -647,9 +524,6 @@
         ×
       </button>
 
-
-
-      <!-- TITLE -->
 
       <h2>
         support naee ♡
@@ -664,9 +538,6 @@
       </p>
 
 
-
-      <!-- QRIS -->
-
       <div class="qris-container">
 
         <img
@@ -678,23 +549,21 @@
       </div>
 
 
-
       <div class="scan">
+
         buat beli risol coklat ♡
         <br>
-        thank you so much! 🩵
-      </div>
 
+        thank you so much! 🩵
+
+      </div>
 
     </div>
 
   </div>
 
 
-
-  <!-- =========================
-       FOOTER
-  ========================= -->
+  <!-- FOOTER -->
 
   <footer>
 
@@ -705,10 +574,7 @@
   </footer>
 
 
-
-  <!-- =========================
-       JAVASCRIPT
-  ========================= -->
+  <!-- JAVASCRIPT -->
 
   <script>
 
@@ -732,9 +598,7 @@
 
     function closeOutside(event) {
 
-      if (
-        event.target.id === "supportBox"
-      ) {
+      if (event.target.id === "supportBox") {
 
         closeSupport();
 
@@ -757,7 +621,6 @@
     );
 
   </script>
-
 
 </body>
 </html>

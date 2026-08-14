@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>helloo—nae.disinii ♡</title>
+  <title>naee—archive ♡</title>
 
   <style>
     * {
@@ -13,16 +13,26 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #f5f9ff;
       color: #355070;
     }
 
+
+    /* =========================
+       HEADER
+    ========================= */
+
     header {
       text-align: center;
-      padding: 70px 20px 50px;
+      padding: 70px 20px 55px;
       background: #dceeff;
+
       border-bottom-left-radius: 40px;
       border-bottom-right-radius: 40px;
     }
@@ -49,10 +59,15 @@
       margin: 0 5px;
     }
 
+
+    /* =========================
+       SECTION
+    ========================= */
+
     section {
       max-width: 1000px;
       margin: auto;
-      padding: 50px 20px;
+      padding: 55px 20px;
     }
 
     .title {
@@ -70,9 +85,18 @@
       color: #7899b8;
     }
 
+
+    /* =========================
+       GALLERY
+    ========================= */
+
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: repeat(
+        auto-fit,
+        minmax(220px, 1fr)
+      );
+
       gap: 22px;
     }
 
@@ -80,7 +104,10 @@
       background: white;
       padding: 15px;
       border-radius: 22px;
-      box-shadow: 0 8px 25px rgba(100, 150, 200, 0.15);
+
+      box-shadow:
+        0 8px 25px rgba(100, 150, 200, 0.15);
+
       transition: 0.3s;
     }
 
@@ -91,20 +118,28 @@
     .card img {
       width: 80%;
       max-height: 300px;
+
       object-fit: contain;
+
       display: block;
       margin: 0 auto;
+
       border-radius: 16px;
     }
 
     .poster-placeholder {
       height: 280px;
+
       border-radius: 16px;
+
       background: #e8f3ff;
+
       display: flex;
       justify-content: center;
       align-items: center;
+
       color: #7aa3c7;
+
       text-align: center;
       padding: 20px;
     }
@@ -116,48 +151,378 @@
 
     .card p {
       margin: 0 5px 8px;
+
       font-size: 13px;
+
       color: #8aa5be;
+
+      line-height: 1.5;
     }
+
+
+    /* =========================
+       SUPPORT SECTION
+    ========================= */
+
+    .support-section {
+      text-align: center;
+
+      background: #eaf5ff;
+
+      max-width: 1000px;
+
+      margin: 20px auto 0;
+
+      padding: 45px 20px;
+
+      border-radius: 35px;
+    }
+
+    .support-section h2 {
+      color: #4b86b4;
+
+      font-size: 27px;
+
+      margin-bottom: 10px;
+    }
+
+    .support-section p {
+      color: #7899b8;
+
+      font-size: 14px;
+
+      line-height: 1.6;
+
+      margin-bottom: 22px;
+    }
+
+    .support-btn {
+      border: 1px solid #4b86b4;
+
+      background: white;
+
+      color: #4b86b4;
+
+      padding: 13px 28px;
+
+      border-radius: 30px;
+
+      font-size: 14px;
+
+      cursor: pointer;
+
+      transition: 0.25s;
+    }
+
+    .support-btn:hover {
+      background: #4b86b4;
+      color: white;
+    }
+
+
+    /* =========================
+       POPUP BACKGROUND
+    ========================= */
+
+    .overlay {
+      position: fixed;
+
+      inset: 0;
+
+      background: rgba(40, 70, 95, 0.45);
+
+      display: none;
+
+      justify-content: center;
+      align-items: center;
+
+      padding: 18px;
+
+      overflow-y: auto;
+
+      z-index: 9999;
+    }
+
+    .overlay.active {
+      display: flex;
+    }
+
+
+    /* =========================
+       POPUP
+    ========================= */
+
+    .popup {
+      position: relative;
+
+      width: 100%;
+
+      max-width: 360px;
+
+      max-height: 92vh;
+
+      overflow-y: auto;
+
+      background: white;
+
+      border-radius: 25px;
+
+      padding: 30px 20px 25px;
+
+      text-align: center;
+
+      box-shadow:
+        0 15px 50px rgba(40, 80, 110, 0.25);
+
+      animation: muncul 0.25s ease;
+    }
+
+    @keyframes muncul {
+
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+    }
+
+
+    /* =========================
+       CLOSE BUTTON
+    ========================= */
+
+    .close {
+      position: absolute;
+
+      top: 10px;
+      right: 15px;
+
+      border: none;
+
+      background: none;
+
+      color: #7899b8;
+
+      font-size: 25px;
+
+      cursor: pointer;
+    }
+
+
+    /* =========================
+       POPUP TEXT
+    ========================= */
+
+    .popup h2 {
+      color: #4b86b4;
+
+      font-size: 23px;
+
+      margin-bottom: 8px;
+    }
+
+    .popup p {
+      color: #7899b8;
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+      margin: 0 auto 20px;
+
+      max-width: 290px;
+    }
+
+
+    /* =========================
+       QRIS
+    ========================= */
+
+    .qris-container {
+      width: 100%;
+
+      display: flex;
+
+      justify-content: center;
+
+      align-items: center;
+
+      margin-bottom: 15px;
+    }
+
+    .qris {
+      display: block;
+
+      width: auto;
+
+      height: auto;
+
+      max-width: 100%;
+
+      max-height: 55vh;
+
+      object-fit: contain;
+
+      border-radius: 12px;
+    }
+
+    .scan {
+      font-size: 12px;
+
+      color: #8aa5be;
+
+      line-height: 1.5;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       text-align: center;
-      padding: 35px 20px;
+
+      padding: 40px 20px;
+
       color: #7c9bb8;
+
       font-size: 13px;
     }
 
     .heart {
       color: #8eb8df;
     }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 600px) {
+
+      header {
+        padding: 55px 18px 45px;
+      }
+
+      header h1 {
+        font-size: 31px;
+      }
+
+      header p {
+        font-size: 11px;
+        letter-spacing: 1.5px;
+      }
+
+      header .subtitle {
+        font-size: 13px;
+      }
+
+      section {
+        padding: 45px 15px;
+      }
+
+      .title h2 {
+        font-size: 24px;
+      }
+
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .card img {
+        width: 85%;
+        max-height: 350px;
+      }
+
+      .support-section {
+        margin: 10px 15px 0;
+
+        border-radius: 28px;
+
+        padding: 38px 18px;
+      }
+
+      .popup {
+        max-height: 90vh;
+
+        padding: 30px 17px 23px;
+      }
+
+      .qris {
+        max-width: 100%;
+
+        max-height: 50vh;
+      }
+
+    }
+
   </style>
 </head>
 
+
 <body>
 
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
   <header>
-    <p>✦ WELCOME TO MY LITTLE ARCHIVE ✦</p>
+
+    <p>
+      ✦ WELCOME TO MY LITTLE ARCHIVE ✦
+    </p>
 
     <h1>
-      <span class="sparkle">🫧</span>
-      helloo—nae.disinii
-      <span class="sparkle">🎀</span>
+
+      <span class="sparkle">
+        🫧
+      </span>
+
+      naee—archive
+
+      <span class="sparkle">
+        🎀
+      </span>
+
     </h1>
 
     <p class="subtitle">
       a little collection of things i've created ♡
     </p>
+
   </header>
 
+
+
+  <!-- =========================
+       CREATIONS
+  ========================= -->
 
   <section>
 
     <div class="title">
-      <h2>my creations 🩵</h2>
-      <p>posters, edits & little things i've made</p>
+
+      <h2>
+        my creations 🩵
+      </h2>
+
+      <p>
+        posters, edits & little things i've made
+      </p>
+
     </div>
 
+
     <div class="gallery">
+
+
+      <!-- POSTER 01 -->
 
       <div class="card">
 
@@ -166,264 +531,233 @@
           alt="Poster One"
         >
 
-        <h3>Poster One</h3>
-        <p>lee leo♡
-         my bojo gue╹⁠▽⁠╹</p>
+        <h3>
+          Poster One
+        </h3>
+
+        <p>
+          lee leo♡
+          <br>
+          my bojo gue ╹⁠▽⁠╹
+        </p>
 
       </div>
 
+
+
+      <!-- POSTER 02 -->
 
       <div class="card">
 
         <div class="poster-placeholder">
-          poster 02<br>
+
+          poster 02
+          <br>
           ✦ coming soon ✦
+
         </div>
 
-        <h3>Poster Two</h3>
-        <p>another piece of my archive 🫧</p>
+        <h3>
+          Poster Two
+        </h3>
+
+        <p>
+          another piece of my archive 🫧
+        </p>
 
       </div>
 
+
+
+      <!-- POSTER 03 -->
 
       <div class="card">
 
         <div class="poster-placeholder">
-          poster 03<br>
+
+          poster 03
+          <br>
           ✦ coming soon ✦
+
         </div>
 
-        <h3>Poster Three</h3>
-        <p>made with love & blue ✧</p>
+        <h3>
+          Poster Three
+        </h3>
+
+        <p>
+          made with love & blue ✧
+        </p>
 
       </div>
+
 
     </div>
 
   </section>
 
 
-  <footer>
-    made with <span class="heart">♡</span> by nae
-  </footer>
 
-</body>
-</html> 
-Q<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- =========================
+       SUPPORT
+  ========================= -->
 
-  <title>naee—archive</title>
+  <section class="support-section">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <h2>
+      like my archive? 🫧
+    </h2>
 
-    body {
-      min-height: 100vh;
-      background: #f7f5f0;
-      color: #222;
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      padding: 25px;
-    }
+    <p>
+      if you enjoy my little creations,
+      <br>
+      you can support me by buying risol coklat ♡
+    </p>
 
-    .container {
-      width: 100%;
-      max-width: 420px;
-      text-align: center;
-    }
-
-    .title {
-      font-size: 35px;
-      font-weight: 700;
-      letter-spacing: -1px;
-      margin-bottom: 8px;
-    }
-
-    .subtitle {
-      color: #777;
-      font-size: 14px;
-      margin-bottom: 35px;
-    }
-
-    .support-btn {
-      border: 1px solid #222;
-      background: transparent;
-      padding: 13px 28px;
-      border-radius: 30px;
-      font-size: 14px;
-      cursor: pointer;
-      transition: 0.25s;
-    }
-
-    .support-btn:hover {
-      background: #222;
-      color: white;
-    }
-
-    /* POP UP */
-
-    .overlay {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .overlay.active {
-      display: flex;
-    }
-
-    .popup {
-      width: 100%;
-      max-width: 350px;
-      background: #fff;
-      border-radius: 22px;
-      padding: 28px;
-      text-align: center;
-      position: relative;
-      animation: muncul 0.25s ease;
-    }
-
-    @keyframes muncul {
-      from {
-        transform: scale(0.9);
-        opacity: 0;
-      }
-      to {
-        transform: scale(1);
-        opacity: 1;
-      }
-    }
-
-    .popup h2 {
-      font-size: 22px;
-      margin-bottom: 8px;
-    }
-
-    .popup p {
-      color: #777;
-      font-size: 13px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    .qris {
-      width: 230px;
-      max-width: 100%;
-      border-radius: 12px;
-      margin-bottom: 15px;
-    }
-
-    .scan {
-      font-size: 12px;
-      color: #888;
-    }
-
-    .close {
-      position: absolute;
-      top: 12px;
-      right: 17px;
-      border: none;
-      background: none;
-      font-size: 23px;
-      cursor: pointer;
-      color: #777;
-    }
-
-    .footer {
-      margin-top: 35px;
-      font-size: 11px;
-      color: #aaa;
-    }
-  </style>
-</head>
-
-<body>
-
-  <div class="container">
-
-    <div class="title">
-      naee—archive
-    </div>
-
-    <div class="subtitle">
-      little things, little memories ♡
-    </div>
-
-    <button class="support-btn" onclick="openSupport()">
+    <button
+      class="support-btn"
+      onclick="openSupport()"
+    >
       support naee ♡
     </button>
 
-    <div class="footer">
-      made with love by naee
-    </div>
-
-  </div>
+  </section>
 
 
-  <!-- POP UP QRIS -->
 
-  <div class="overlay" id="supportBox" onclick="closeOutside(event)">
+  <!-- =========================
+       QRIS POPUP
+  ========================= -->
+
+  <div
+    class="overlay"
+    id="supportBox"
+    onclick="closeOutside(event)"
+  >
 
     <div class="popup">
 
-      <button class="close" onclick="closeSupport()">
+
+      <!-- CLOSE -->
+
+      <button
+        class="close"
+        onclick="closeSupport()"
+      >
         ×
       </button>
 
-      <h2>support naee ♡</h2>
+
+
+      <!-- TITLE -->
+
+      <h2>
+        support naee ♡
+      </h2>
+
 
       <p>
-        thank you for supporting this little archive!
+        thank you for supporting
+        this little archive!
         <br>
-        you can scan the QR below ♡
+        scan the QR below ♡
       </p>
 
-      <!-- GANTI qris.png DENGAN NAMA FILE QRIS KAMU -->
-      <img
-        src="Qr_ID1026497998975_14.08.26_1786713784_1786713786300.jpeg"
-        alt="QRIS Support"
-        class="qris"
-      >
+
+
+      <!-- QRIS -->
+
+      <div class="qris-container">
+
+        <img
+          src="Qr_ID1026497998975_14.08.26_1786713784_1786713786300.jpeg"
+          alt="QRIS Support Naee"
+          class="qris"
+        >
+
+      </div>
+
+
 
       <div class="scan">
-        buat belik risol coklat♡
+        buat beli risol coklat ♡
+        <br>
+        thank you so much! 🩵
       </div>
+
 
     </div>
 
   </div>
 
+
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
+  <footer>
+
+    made with
+    <span class="heart">♡</span>
+    by nae
+
+  </footer>
+
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
 
   <script>
 
     function openSupport() {
-      document.getElementById("supportBox").classList.add("active");
+
+      document
+        .getElementById("supportBox")
+        .classList.add("active");
+
     }
+
 
     function closeSupport() {
-      document.getElementById("supportBox").classList.remove("active");
+
+      document
+        .getElementById("supportBox")
+        .classList.remove("active");
+
     }
+
 
     function closeOutside(event) {
-      if (event.target.id === "supportBox") {
+
+      if (
+        event.target.id === "supportBox"
+      ) {
+
         closeSupport();
+
       }
+
     }
 
+
+    document.addEventListener(
+      "keydown",
+      function(event) {
+
+        if (event.key === "Escape") {
+
+          closeSupport();
+
+        }
+
+      }
+    );
+
   </script>
+
 
 </body>
 </html>

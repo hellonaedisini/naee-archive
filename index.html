@@ -209,3 +209,221 @@
 
 </body>
 </html> 
+Q<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>naee—archive</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #f7f5f0;
+      color: #222;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 35px;
+      font-weight: 700;
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .subtitle {
+      color: #777;
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
+
+    .support-btn {
+      border: 1px solid #222;
+      background: transparent;
+      padding: 13px 28px;
+      border-radius: 30px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .support-btn:hover {
+      background: #222;
+      color: white;
+    }
+
+    /* POP UP */
+
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .overlay.active {
+      display: flex;
+    }
+
+    .popup {
+      width: 100%;
+      max-width: 350px;
+      background: #fff;
+      border-radius: 22px;
+      padding: 28px;
+      text-align: center;
+      position: relative;
+      animation: muncul 0.25s ease;
+    }
+
+    @keyframes muncul {
+      from {
+        transform: scale(0.9);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    .popup h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+    }
+
+    .popup p {
+      color: #777;
+      font-size: 13px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .qris {
+      width: 230px;
+      max-width: 100%;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .scan {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .close {
+      position: absolute;
+      top: 12px;
+      right: 17px;
+      border: none;
+      background: none;
+      font-size: 23px;
+      cursor: pointer;
+      color: #777;
+    }
+
+    .footer {
+      margin-top: 35px;
+      font-size: 11px;
+      color: #aaa;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="title">
+      naee—archive
+    </div>
+
+    <div class="subtitle">
+      little things, little memories ♡
+    </div>
+
+    <button class="support-btn" onclick="openSupport()">
+      support naee ♡
+    </button>
+
+    <div class="footer">
+      made with love by naee
+    </div>
+
+  </div>
+
+
+  <!-- POP UP QRIS -->
+
+  <div class="overlay" id="supportBox" onclick="closeOutside(event)">
+
+    <div class="popup">
+
+      <button class="close" onclick="closeSupport()">
+        ×
+      </button>
+
+      <h2>support naee ♡</h2>
+
+      <p>
+        thank you for supporting this little archive!
+        <br>
+        you can scan the QR below ♡
+      </p>
+
+      <!-- GANTI qris.png DENGAN NAMA FILE QRIS KAMU -->
+      <img
+        src="Qr_ID1026497998975_14.08.26_1786713784_1786713786300.jpeg"
+        alt="QRIS Support"
+        class="qris"
+      >
+
+      <div class="scan">
+        buat belik risol coklat♡
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script>
+
+    function openSupport() {
+      document.getElementById("supportBox").classList.add("active");
+    }
+
+    function closeSupport() {
+      document.getElementById("supportBox").classList.remove("active");
+    }
+
+    function closeOutside(event) {
+      if (event.target.id === "supportBox") {
+        closeSupport();
+      }
+    }
+
+  </script>
+
+</body>
+</html>
